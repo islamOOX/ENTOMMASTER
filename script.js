@@ -15,6 +15,24 @@ document.querySelectorAll(".nav-menu a").forEach(link => {
     });
 });
 
+// Faire disparaître la navbar lors du défilement vers le bas
+let lastScrollTop = 0;
+const navbar = document.querySelector('.navbar');
+
+window.addEventListener('scroll', function() {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (scrollTop > lastScrollTop && scrollTop > 100) {
+        // Défilement vers le bas - cacher la navbar
+        navbar.classList.add('hidden');
+    } else {
+        // Défilement vers le haut - montrer la navbar
+        navbar.classList.remove('hidden');
+    }
+    
+    lastScrollTop = scrollTop;
+});
+
 // Navigation fluide pour les liens d\'ancrage
 document.querySelectorAll(\'a[href^="#"]\').forEach(anchor => {
     anchor.addEventListener(\'click\', function (e) {

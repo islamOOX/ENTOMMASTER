@@ -1,5 +1,5 @@
 /* General Styles */
-body {
+html, body {
     margin: 0;
     padding: 0;
     font-family: 'Georgia', serif; /* Font similar to the image */
@@ -7,6 +7,12 @@ body {
     color: #e0e0e0;
     line-height: 1.6;
     overflow-x: hidden;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
 /* Header and Navigation */
@@ -22,6 +28,11 @@ body {
     left: 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.navbar.hidden {
+    transform: translateY(-100%);
 }
 
 .nav-brand h1 {
@@ -35,6 +46,7 @@ body {
     list-style: none;
     display: flex;
     gap: 2.5rem;
+    margin-left: -200px; /* Déplacer vers la gauche */
 }
 
 .nav-menu a {
@@ -70,11 +82,10 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 150px 2rem 2rem; /* Increased padding-top to account for fixed header */
+    padding: 150px 0 2rem; /* Supprimer le padding horizontal */
     background: url('background.webp') no-repeat center center/cover; /* Background image */
     position: relative;
-    aspect-ratio: 3/2; /* For PC compatibility */
-    max-height: 100vh;
+    width: 100%;
     overflow: hidden;
 }
 
