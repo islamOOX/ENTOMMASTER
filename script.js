@@ -15,19 +15,35 @@ document.querySelectorAll(".nav-menu a").forEach(link => {
     });
 });
 
-// Gestion des clics sur les cartes d'ordres
+// Navigation fluide pour les liens d\'ancrage
+document.querySelectorAll(\'a[href^="#"]\').forEach(anchor => {
+    anchor.addEventListener(\'click\', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute(\'href\').substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: \'smooth\',
+                block: \'start\'
+            });
+        }
+    });
+});
+
+// Gestion des clics sur les cartes d\\\'ordres
 const orderCards = document.querySelectorAll(".order-card");
 
 orderCards.forEach(card => {
     card.addEventListener("click", function() {
         const order = this.getAttribute("data-order");
         
-        // Redirection vers le site de l'ordre correspondant
+        // Redirection vers le site de l\\\'ordre correspondant
         redirectToOrder(order);
     });
 });
 
-// Fonction de redirection vers les sites d'ordres
+// Fonction de redirection vers les sites d\\\'ordres
 function redirectToOrder(order) {
     const orderUrls = {
         "coleopteres": "./coleopteres/index.html",
@@ -42,7 +58,7 @@ function redirectToOrder(order) {
     if (orderUrls[order]) {
         window.location.href = orderUrls[order];
     } else {
-        console.error("URL non trouvée pour l'ordre:", order);
+        console.error("URL non trouvée pour l\\\'ordre:", order);
     }
 }
 
@@ -66,5 +82,6 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(typeWriter, 1000);
     }
 });
+
 
 
