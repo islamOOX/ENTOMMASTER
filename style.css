@@ -42,7 +42,7 @@ html, body {
     list-style: none;
     display: flex;
     gap: 2.5rem;
-    margin-right: 3rem; /* Move navigation items to the left */
+    margin-right: 5rem; /* Déplacé plus à gauche */
 }
 
 .nav-menu a {
@@ -81,7 +81,7 @@ html, body {
     padding: 150px 2rem 2rem; /* Increased padding-top to account for fixed header */
     background: url('background.webp') no-repeat center center/cover; /* Background image */
     position: relative;
-    aspect-ratio: 3/2; /* For PC compatibility */
+    /* aspect-ratio: 3/2; /* For PC compatibility - Removed as it was causing issues with full width */
     max-height: 100vh;
     overflow: hidden;
     width: 100vw; /* Ensure it covers full viewport width */
@@ -102,7 +102,7 @@ html, body {
 .hero-content {
     text-align: center;
     z-index: 2;
-    max-width: 1200px;
+    max-width: 100%; /* Changed from 1200px to 100% */
     width: 100%;
     padding: 0 20px;
 }
@@ -128,7 +128,7 @@ html, body {
 }
 
 .order-card {
-    background-color: rgba(26, 42, 42, 0.6); /* Dark green for cards with transparency */
+    background-color: rgba(26, 42, 42, 0.4); /* Dark green for cards with more transparency */
     border-radius: 10px;
     padding: 1.5rem;
     text-align: center;
@@ -157,7 +157,7 @@ html, body {
 
 /* About Section */
 .about-section {
-    background-color: rgba(26, 42, 42, 0.6); /* Dark green for about section with transparency */
+    background-color: rgba(26, 42, 42, 0.4); /* Dark green for about section with more transparency */
     border-radius: 10px;
     padding: 2rem;
     max-width: 800px;
