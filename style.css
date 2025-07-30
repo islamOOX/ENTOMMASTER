@@ -1,7 +1,5 @@
 /* General Styles */
-html, body {
-    height: 100%;
-    width: 100%;
+body {
     margin: 0;
     padding: 0;
     font-family: 'Georgia', serif; /* Font similar to the image */
@@ -24,11 +22,6 @@ html, body {
     left: 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    transition: top 0.3s ease-in-out; /* Add transition for smooth hide/show */
-}
-
-.navbar.hidden {
-    top: -100px; /* Hide the navbar by moving it up */
 }
 
 .nav-brand h1 {
@@ -42,7 +35,6 @@ html, body {
     list-style: none;
     display: flex;
     gap: 2.5rem;
-    margin-right: 5rem; /* Déplacé plus à gauche */
 }
 
 .nav-menu a {
@@ -78,14 +70,12 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 150px 2rem 2rem; /* Increased padding-top to account for fixed header */
+    padding: 200px 2rem 2rem; /* Increased padding-top to account for fixed header */
     background: url('background.webp') no-repeat center center/cover; /* Background image */
     position: relative;
-    /* aspect-ratio: 3/2; /* For PC compatibility - Removed as it was causing issues with full width */
+    aspect-ratio: 3/2; /* For PC compatibility */
     max-height: 100vh;
     overflow: hidden;
-    width: 100vw; /* Ensure it covers full viewport width */
-    box-sizing: border-box; /* Include padding in width calculation */
 }
 
 .hero-section::before {
@@ -102,7 +92,7 @@ html, body {
 .hero-content {
     text-align: center;
     z-index: 2;
-    max-width: 100%; /* Changed from 1200px to 100% */
+    max-width: 1200px;
     width: 100%;
     padding: 0 20px;
 }
@@ -128,7 +118,7 @@ html, body {
 }
 
 .order-card {
-    background-color: rgba(26, 42, 42, 0.4); /* Dark green for cards with more transparency */
+    background-color: rgba(42, 74, 58, 0.7); /* Dark green for cards with transparency */
     border-radius: 10px;
     padding: 1.5rem;
     text-align: center;
@@ -157,7 +147,7 @@ html, body {
 
 /* About Section */
 .about-section {
-    background-color: rgba(26, 42, 42, 0.4); /* Dark green for about section with more transparency */
+    background-color: rgba(42, 74, 58, 0.7); /* Dark green for about section with transparency */
     border-radius: 10px;
     padding: 2rem;
     max-width: 800px;
