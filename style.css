@@ -1,7 +1,12 @@
 /* General Styles */
-body {
+html, body {
+    height: 100%;
+    width: 100%;
     margin: 0;
     padding: 0;
+}
+
+body {
     font-family: 'Georgia', serif; /* Font similar to the image */
     background-color: #1a2a2a; /* Dark green background */
     color: #e0e0e0;
@@ -14,12 +19,14 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 3rem;
+    padding: 1.5rem 1rem;
     background-color: rgba(42, 74, 58, 0.8); /* Darker green for header with transparency */
     position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
+    max-width: 1200px; /* Max width for the navbar */
+    width: 90%; /* Reduced width */
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
@@ -34,7 +41,8 @@ body {
 .nav-menu {
     list-style: none;
     display: flex;
-    gap: 2.5rem;
+    justify-content: flex-start; /* Align items to the start */
+    gap: 1.5rem; /* Reduced gap */
 }
 
 .nav-menu a {
@@ -66,16 +74,16 @@ body {
 /* Hero Section */
 .hero-section {
     min-height: 100vh;
+    width: 100vw; /* Ensure it covers the full viewport width */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 150px 2rem 2rem; /* Increased padding-top to account for fixed header */
-    background: url('background.webp') no-repeat center center/cover; /* Background image */
+    padding: 200px 2rem 2rem; /* Increased padding-top to account for fixed header */
+    background: url("background.webp") no-repeat center center/cover; /* Background image */
     position: relative;
-    aspect-ratio: 3/2; /* For PC compatibility */
-    max-height: 100vh;
-    overflow: hidden;
+    /* aspect-ratio: 3/2; */ /* Removed as it might constrain full coverage */
+    max-height: none; /* Allow full height */
 }
 
 .hero-section::before {
@@ -102,7 +110,7 @@ body {
     font-weight: 700;
     margin-bottom: 3rem;
     color: #f0e68c; /* Golden color for title */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    text-shadow: 0 0 15px rgba(240, 230, 140, 0.8), 0 0 25px rgba(240, 230, 140, 0.6); /* Enhanced golden glow */
     line-height: 1.2;
 }
 
