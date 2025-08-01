@@ -145,16 +145,16 @@ function init3DModel() {
     controls.autoRotateSpeed = 1;
     
     // Ajouter l'éclairage
-    const ambientLight = new THREE.AmbientLight(0x404040, 0.6);
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.8);
     scene.add(ambientLight);
     
-    const directionalLight = new THREE.DirectionalLight(0xffffff, 0.8);
-    directionalLight.position.set(10, 10, 5);
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 1.2);
+    directionalLight.position.set(10, 15, 10);
     directionalLight.castShadow = true;
     scene.add(directionalLight);
     
-    const pointLight = new THREE.PointLight(0x7fb069, 0.5);
-    pointLight.position.set(-10, -10, -5);
+    const pointLight = new THREE.PointLight(0xffffff, 0.7);
+    pointLight.position.set(-15, 10, -15);
     scene.add(pointLight);
     
     // Charger le modèle 3D
@@ -169,12 +169,12 @@ function init3DModel() {
 
 function loadModel() {
     console.log('Chargement du modèle 3D...');
+      // Créer un loader GLB
+    const loader = new THREE.GLTFLoader();
     
-    // Créer un loader FBX
-    const loader = new THREE.FBXLoader();
-    
-    // Charger le modèle FBX
-    loader.load('models/Untitled.fbx', function(object) {
+    // Charger le modèle GLB
+    loader.load(
+        'models/papillon.glb',ion(object) {
         console.log('Modèle FBX chargé avec succès');
         
         // Calculer la boîte englobante pour centrer le modèle
@@ -216,66 +216,18 @@ function loadModel() {
     }, function(progress) {
         console.log('Progression du chargement:', (progress.loaded / progress.total * 100) + '%');
     }, function(error) {
-        console.error('Erreur lors du chargement du modèle FBX:', error);
+        console.error("Erreur lors du chargement du modèle GLB:", error);
         
-        // Fallback vers le modèle OBJ
-        loadOBJModel();
+        // Afficher un message d'erreur si le modèle ne charge pas
+        const modelError = document.getElementById('model-error');
+        if (modelError) {
+            modelError.textContent = 'Erreur lors du chargement du modèle 3D. Veuillez réessayer plus tard.';
+            modelError.style.display = 'block';
+        }
     });
 }
 
-function loadOBJModel() {
-    console.log('Chargement du modèle OBJ de fallback...');
-    
-    const loader = new CustomOBJLoader();
-    
-    // Essayer de charger le modèle fourni
-    loader.load('models/Untitled.obj', 'models/Untitled.mtl')
-        .then(loadedModel => {
-            if (loadedModel) {
-                model = loadedModel;
-                
-                // Calculer la boîte englobante pour ajuster la taille
-                const box = new THREE.Box3().setFromObject(model);
-                const size = box.getSize(new THREE.Vector3());
-                const maxDim = Math.max(size.x, size.y, size.z);
-                const scale = 2 / maxDim; // Ajuster pour que le modèle fasse environ 2 unités
-                
-                model.scale.set(scale, scale, scale);
-                
-                // Centrer le modèle
-                const center = box.getCenter(new THREE.Vector3());
-                model.position.set(-center.x * scale, -center.y * scale, -center.z * scale);
-                
-                model.castShadow = true;
-                model.receiveShadow = true;
-                
-                // Améliorer le matériau
-                model.traverse(function(child) {
-                    if (child.isMesh) {
-                        child.material = new THREE.MeshPhongMaterial({
-                            color: 0x4a7c59,
-                            shininess: 100,
-                            side: THREE.DoubleSide
-                        });
-                        child.castShadow = true;
-                        child.receiveShadow = true;
-                    }
-                });
-                
-                scene.add(model);
-                console.log('Modèle 3D ajouté à la scène');
-                
-                // Masquer le message d'erreur
-                document.getElementById('model-error').style.display = 'none';
-            }
-        })
-        .catch(error => {
-            console.warn('Utilisation du modèle de secours:', error);
-            // Utiliser le modèle de secours
-            model = loader.createFallbackModel();
-            scene.add(model);
-        });
-}
+
 function animate() {
     requestAnimationFrame(animate);
     
