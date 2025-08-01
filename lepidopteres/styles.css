@@ -79,17 +79,17 @@ body {
 }
 
 .hero-3d-container {
-    background: transparent; /* Fully transparent */
+    background: rgba(255, 255, 255, 0.1);
     border-radius: var(--border-radius);
     padding: 2rem;
-    backdrop-filter: none; /* Remove blur */
-    border: none; /* Remove border */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     animation: fadeInUp 1s ease-out 0.4s both;
 }
 
 #model-viewer {
-    width: 100%;
-    height: 500px; /* Increased height for better visibility */
+    width: 400px;
+    height: 300px;
     margin: 0 auto;
     border-radius: var(--border-radius);
     overflow: hidden;
