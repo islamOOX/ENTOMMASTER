@@ -427,20 +427,3 @@ model-viewer {
     background: linear-gradient(135deg, #5a6fd8, #6a4190);
 }
 
-
-/* Encadré explicatif pour les pattes du thorax */
-.thorax-info {
-    text-align: center;
-    font-weight: 500;
-    font-size: 1.05rem;
-    background: #fdfdfd;
-    border-left: 5px solid #667eea;
-    border-radius: 12px;
-    padding: 15px 20px;
-    margin: 0 auto 20px auto;
-    max-width: 800px;
-    color: #333;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    line-height: 1.6;
-    animation: fadeInUp 0.8s ease forwards;
-}
