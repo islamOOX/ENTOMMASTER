@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classification par Culture - EntomMaster</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/classification-styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h1>EntomMaster</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="identification.html" class="nav-link">Identification</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="classification-cultures.html" class="nav-link active">Classification par Culture</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="galerie.html" class="nav-link">Galerie</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Classification des Espèces par Culture</h1>
+                <p>Découvrez les ravageurs spécifiques à chaque type de culture agricole</p>
+            </div>
+        </section>
+
+        <section class="classification-section">
+            <div class="container">
+                <div class="classification-tabs">
+                    <button class="tab-button active" data-tab="maraicheres">Cultures Maraîchères</button>
+                    <button class="tab-button" data-tab="fruitieres">Arboriculture Fruitière</button>
+                    <button class="tab-button" data-tab="ornementales">Cultures Ornementales</button>
+                    <button class="tab-button" data-tab="grandes">Grandes Cultures</button>
+                </div>
+
+                <!-- Cultures Maraîchères -->
+                <div class="tab-content active" id="maraicheres">
+                    <div class="culture-category">
+                        <h2>Cultures Maraîchères</h2>
+                        
+                        <div class="culture-group">
+                            <h3><i class="icon-leaf"></i>Crucifères (Choux, Radis, Navets)</h3>
+                            <div class="species-grid">
+                                <div class="species-card">
+                                    <div class="species-image">
+                                        <img src="images/ceutorhynchus-picitarsis.jpg" alt="Ceutorhynchus picitarsis" loading="lazy">
+                                    </div>
+                                    <div class="species-info">
+                                        <h4>Ceutorhynchus picitarsis</h4>
+                                        <p class="scientific-name">Gyllenhal 1837</p>
+                                        <div class="species-details">
+                                            <span class="size">Taille: 2,2 à 3,5 mm</span>
+                                            <span class="color">Couleur: noir brillant</span>
+                                        </div>
+                                        <p class="description">Corps pubescent avec dimorphisme sexuel marqué. Présence de squamules jaunâtres dans l'angle thoraco-élytral.</p>
+                                    </div>
+                                </div>
+
+                                <div class="species-card">
+                                    <div class="species-image">
+                                        <img src="images/ceutorhynchus-quadridens.jpg" alt="Ceutorhynchus quadridens" loading="lazy">
+                                    </div>
+                                    <div class="species-info">
+                                        <h4>Ceutorhynchus quadridens</h4>
+                                        <p class="scientific-name">Panzer, 1795</p>
+                                        <div class="species-details">
+                                            <span class="size">Taille: 2,5 à 3,5 mm</span>
+                                            <span class="color">Couleur: noire</span>
+                                        </div>
+                                        <p class="description">Corps pubescent avec élytres possédant des soies rousses et des squamules blanchâtres irrégulièrement réparties.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="culture-group">
+                            <h3><i class="icon-flower"></i>Colza</h3>
+                            <div class="species-grid">
+                                <div class="species-card">
+                                    <div class="species-image">
+                                        <img src="images/ceutorhynchus-napi.jpg" alt="Ceutorhynchus napi" loading="lazy">
+                                    </div>
+                                    <div class="species-info">
+                                        <h4>Ceutorhynchus napi</h4>
+                                        <p class="scientific-name">Gyllenhal 1837</p>
+                                        <div class="species-details">
+                                            <span class="size">Taille: 3,2 à 4 mm</span>
+                                            <span class="color">Couleur: noire</span>
+                                        </div>
+                                        <p class="description">Élytres recouverts de squamules blanchâtres formant 3 rangées par interstries. Spécifique au colza.</p>
+                                    </div>
+                                </div>
+
+                                <div class="species-card">
+                                    <div class="species-image">
+                                        <img src="images/baris-quadraticollis.jpg" alt="Baris quadraticollis" loading="lazy">
+                                    </div>
+                                    <div class="species-info">
+                                        <h4>Baris quadraticollis</h4>
+                                        <p class="scientific-name">Boheman, 1836</p>
+                                        <div class="species-details">
+                                            <span class="size">Taille: 3 à 3,5 mm</span>
+                                            <span class="color">Couleur: noire à reflet bleu vert</span>
+                                        </div>
+                                        <p class="description">Corps non pubescent, rostre pubescent en dessous, prothorax aussi long que large.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Arboriculture Fruitière -->
+                <div class="tab-content" id="fruitieres">
+                    <div class="culture-category">
+                        <h2>Arboriculture Fruitière</h2>
+                        
+                        <div class="culture-group">
+                            <h3><i class="icon-tree"></i>Arbres Fruitiers à Noyaux</h3>
+                            <div class="species-grid">
+                                <div class="species-card">
+                                    <div class="species-image">
+                                        <img src="images/ruguloscolytus-amygdali.jpg" alt="Ruguloscolytus amygdali" loading="lazy">
+                                    </div>
+                                    <div class="species-info">
+                                        <h4>Ruguloscolytus amygdali</h4>
+                                        <p class="scientific-name">De Geer</p>
+                                        <div class="species-details">
+                                            <span class="size">Taille: 2 à 3 mm</span>
+                                            <span class="color">Couleur: noir profond</span>
+                                        </div>
+                                        <p class="description">Pronotum marqué de petites ponctuations nombreuses, ovales et distinctes. Ravageur des arbres fruitiers à noyaux.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="culture-group">
+                            <h3><i class="icon-apple"></i>Arbres Fruitiers Généraux</h3>
+                            <div class="species-grid">
+                                <div class="species-card">
+                                    <div class="species-image">
+                                        <img src="images/ruguloscolytus-mediterraneus.jpg" alt="Ruguloscolytus mediterraneus" loading="lazy">
+                                    </div>
+                                    <div class="species-info">
+                                        <h4>Ruguloscolytus mediterraneus</h4>
+                                        <p class="scientific-name">Eggert</p>
+                                        <div class="species-details">
+                                            <span class="size">Taille: 1,8 à 2,4 mm</span>
+                                            <span class="color">Couleur: brun foncé</span>
+                                        </div>
+                                        <p class="description">Corps trapu avec ponctuations des élytres très serrées et enfoncées dans de légers sillons.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cultures Ornementales -->
+                <div class="tab-content" id="ornementales">
+                    <div class="culture-category">
+                        <h2>Cultures Ornementales et Oléicoles</h2>
+                        
+                        <div class="culture-group">
+                            <h3><i class="icon-olive"></i>Olivier</h3>
+                            <div class="species-grid">
+                                <div class="species-card">
+                                    <div class="species-image">
+                                        <img src="images/phloeotribus-scarabaeoides.jpg" alt="Phloeotribus scarabaeoides" loading="lazy">
+                                    </div>
+                                    <div class="species-info">
+                                        <h4>Phloeotribus scarabaeoides</h4>
+                                        <p class="scientific-name">Bernard 1788</p>
+                                        <div class="species-details">
+                                            <span class="size">Taille: 2 mm environ</span>
+                                            <span class="color">Couleur: sombre</span>
+                                        </div>
+                                        <p class="description">Petit scolyte ovale portant 2 taches plus sombres sur chaque élytre. Ravageur de l'olivier, lilas et troène.</p>
+                                    </div>
+                                </div>
+
+                                <div class="species-card">
+                                    <div class="species-image">
+                                        <img src="images/hylesinus-oleiperda.jpg" alt="Hylesinus oleiperda" loading="lazy">
+                                    </div>
+                                    <div class="species-info">
+                                        <h4>Hylesinus oleiperda</h4>
+                                        <p class="scientific-name">Fabricius, 1792</p>
+                                        <div class="species-details">
+                                            <span class="size">Taille: 2,5 à 3,5 mm</span>
+                                            <span class="color">Couleur: noire avec pilosité rousse</span>
+                                        </div>
+                                        <p class="description">Forme ovoïde avec antennes terminées par une massue de 3 articles. Pronotum robuste et enfoncé.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grandes Cultures -->
+                <div class="tab-content" id="grandes">
+                    <div class="culture-category">
+                        <h2>Grandes Cultures</h2>
+                        
+                        <div class="culture-group">
+                            <h3><i class="icon-wheat"></i>Graminées et Prairies</h3>
+                            <div class="species-grid">
+                                <div class="species-card">
+                                    <div class="species-image">
+                                        <img src="images/locusta-migratoria.jpg" alt="Locusta migratoria" loading="lazy">
+                                    </div>
+                                    <div class="species-info">
+                                        <h4>Locusta migratoria</h4>
+                                        <p class="scientific-name">Criquet migrateur</p>
+                                        <div class="species-details">
+                                            <span class="size">Taille: Variable selon phase</span>
+                                            <span class="color">Couleur: vert vif avec tibias postérieurs rouges</span>
+                                        </div>
+                                        <p class="description">Carène médiane du pronotum franchement interrompue par le sillon typique. Tegmina environ deux fois plus longs que les fémurs postérieurs.</p>
+                                    </div>
+                                </div>
+
+                                <div class="species-card">
+                                    <div class="species-image">
+                                        <img src="images/calliptamus-wattenwylianus.jpg" alt="Calliptamus wattenwylianus" loading="lazy">
+                                    </div>
+                                    <div class="species-info">
+                                        <h4>Calliptamus wattenwylianus</h4>
+                                        <p class="scientific-name">Saussure</p>
+                                        <div class="species-details">
+                                            <span class="size">Taille: Moyenne à grande</span>
+                                            <span class="color">Couleur: Variable, souvent brunâtre</span>
+                                        </div>
+                                        <p class="description">Espèce de criquet avec dimorphisme sexuel marqué. Ravageur des graminées et cultures céréalières.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="search-section">
+            <div class="container">
+                <h2>Recherche par Culture</h2>
+                <div class="search-container">
+                    <input type="text" id="culture-search" placeholder="Tapez le nom d'une culture (ex: colza, olivier, blé...)">
+                    <button id="search-btn">Rechercher</button>
+                </div>
+                <div id="search-results" class="search-results"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>EntomMaster</h3>
+                <p>Votre guide expert pour l'identification des insectes ravageurs agricoles.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="identification.html">Identification</a></li>
+                    <li><a href="classification-cultures.html">Classification</a></li>
+                    <li><a href="galerie.html">Galerie</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: contact@entommaster.com</p>
+                <p>Téléphone: +33 1 23 45 67 89</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 EntomMaster. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/classification-script.js"></script>
+</body>
+</html>
+
