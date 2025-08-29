@@ -2,6 +2,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     initializePage();
     setupEventListeners();
+    correctIcons();
     loadSpeciesData();
 });
 
@@ -190,6 +191,23 @@ function openSpeciesModal(specie) {
     modalCultures.textContent = specie.cultures;
     modalDescription.textContent = specie.description;
     
+    // Ajouter la phrase d'invitation
+    const invitation = document.createElement('div');
+    invitation.className = 'info-section invitation';
+    invitation.innerHTML = `
+        <h3>📚 Pour en savoir plus</h3>
+        <p>Veuillez visiter la section de classification entomologique pour une classification et une description plus détaillées.</p>
+    `;
+    
+    // S'assurer que l'invitation n'est ajoutée qu'une seule fois
+    const existingInvitation = document.querySelector('.invitation');
+    if (existingInvitation) {
+        existingInvitation.remove();
+    }
+    
+    // Ajouter l'invitation à la modal
+    document.querySelector('.modal-info').appendChild(invitation);
+    
     // Afficher la modal
     modal.style.display = 'block';
     document.body.style.overflow = 'hidden';
@@ -325,6 +343,36 @@ function clearSearchResults() {
     }
 }
 
+// Correction automatique des icônes
+function correctIcons() {
+    const orderIconMap = {
+        "Coléoptères": "🪲",
+        "Hémiptères": "🐞",
+        "Lépidoptères": "🦋",
+        "Diptères": "🪰",
+        "Thysanoptères": "🦗",
+        "Hyménoptères": "🐝",
+        "Orthoptères": "🦗"
+    };
+
+    // Parcourir toutes les catégories
+    Object.keys(speciesData).forEach(category => {
+        speciesData[category].forEach(specie => {
+            // Corriger l'icône si elle ne correspond pas à l'ordre
+            if (orderIconMap[specie.order] && specie.icon !== orderIconMap[specie.order]) {
+                specie.icon = orderIconMap[specie.order];
+            }
+        });
+    });
+
+    // Corriger aussi les espèces polyphages
+    polyphageSpecies.forEach(specie => {
+        if (orderIconMap[specie.order] && specie.icon !== orderIconMap[specie.order]) {
+            specie.icon = orderIconMap[specie.order];
+        }
+    });
+}
+
 // Animations
 function animatePageLoad() {
     // Animation du titre
@@ -374,15 +422,3 @@ function smoothScrollTo(element) {
         block: 'start'
     });
 }
-
-// Fonctions d'export pour les tests
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = {
-        createSpeciesCard,
-        performSearch,
-        showTab,
-        openSpeciesModal,
-        closeModal
-    };
-}
-
