@@ -86,11 +86,11 @@ function loadSpeciesData() {
     loadCategoryData('legumineuses', speciesData.legumineuses);
     loadCategoryData('betterave', speciesData.betterave);
     
-    loadCategoryData('rosacees-noyaux', speciesData.rosacees_noyaux);
-    loadCategoryData('rosacees-pepins', speciesData.rosacees_pepins);
+    loadCategoryData('rosacees_noyaux', speciesData.rosacees_noyaux);
+    loadCategoryData('rosacees_pepins', speciesData.rosacees_pepins);
     loadCategoryData('agrumes', speciesData.agrumes);
     loadCategoryData('vigne', speciesData.vigne);
-    loadCategoryData('fruits-rouges', speciesData.fruits_rouges);
+    loadCategoryData('fruits_rouges', speciesData.fruits_rouges);
     
     loadCategoryData('olivier', speciesData.olivier);
     loadCategoryData('ornementaux', speciesData.ornementaux);
