@@ -428,26 +428,6 @@ body {
     line-height: 1.6;
 }
 
-/* Style pour l'invitation */
-.invitation {
-    background: rgba(240, 230, 140, 0.1);
-    border-left: 4px solid #f0e68c;
-    padding: 1rem;
-    border-radius: 4px;
-    margin-top: 1.5rem;
-}
-
-.invitation h3 {
-    color: #f0e68c;
-    margin-bottom: 0.5rem;
-}
-
-.invitation p {
-    color: #c0c0c0;
-    font-style: italic;
-    margin-bottom: 0;
-}
-
 /* Animations */
 @keyframes fadeInUp {
     from {
@@ -574,3 +554,4 @@ html {
 ::-webkit-scrollbar-thumb:hover {
     background: rgba(240, 230, 140, 0.7);
 }
+
