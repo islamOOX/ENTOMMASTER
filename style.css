@@ -7,8 +7,8 @@ html, body {
 }
 
 body {
-    font-family: 'Georgia', serif; /* Font similar to the image */
-    background-color: #1a2a2a; /* Dark green background */
+    font-family: 'Georgia', serif;
+    background-color: #1a2a2a;
     color: #e0e0e0;
     line-height: 1.6;
     overflow-x: hidden;
@@ -20,10 +20,10 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 1rem;
-    background-color: rgba(42, 74, 58, 0.8); /* Darker green for header with transparency */
+    background-color: rgba(42, 74, 58, 0.8);
     position: fixed;
-    max-width: 1200px; /* Max width for the navbar */
-    width: 90%; /* Reduced width */
+    max-width: 1200px;
+    width: 90%;
     left: 50%;
     transform: translateX(-50%);
     margin: 0;
@@ -33,7 +33,7 @@ body {
 
 .nav-brand h1 {
     font-size: 2.5rem;
-    color: #f0e68c; /* Golden color for ENTOMASTER */
+    color: #f0e68c;
     font-weight: bold;
     letter-spacing: 2px;
 }
@@ -41,8 +41,8 @@ body {
 .nav-menu {
     list-style: none;
     display: flex;
-    justify-content: flex-start; /* Align items to the start */
-    gap: 1.5rem; /* Reduced gap */
+    justify-content: flex-start;
+    gap: 1.5rem;
 }
 
 .nav-menu a {
@@ -58,7 +58,7 @@ body {
 }
 
 .hamburger {
-    display: none; /* Hidden on desktop */
+    display: none;
     flex-direction: column;
     cursor: pointer;
 }
@@ -74,16 +74,14 @@ body {
 /* Hero Section */
 .hero-section {
     min-height: 100vh;
-    width: 100vw; /* Ensure it covers the full viewport width */
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 200px 2rem 2rem; /* Increased padding-top to account for fixed header */
-    background: url("background.webp") no-repeat center center/cover; /* Background image */
+    padding: 200px 2rem 2rem;
+    background: url("background.webp") no-repeat center center/cover;
     position: relative;
-    /* aspect-ratio: 3/2; */ /* Removed as it might constrain full coverage */
-    max-height: none; /* Allow full height */
 }
 
 .hero-section::before {
@@ -93,7 +91,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for transparency */
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
@@ -109,15 +107,15 @@ body {
     font-size: 4.5rem;
     font-weight: 700;
     margin-bottom: 3rem;
-    color: #f0e68c; /* Golden color for title */
-    text-shadow: 0 0 15px rgba(240, 230, 140, 0.8), 0 0 25px rgba(240, 230, 140, 0.6); /* Enhanced golden glow */
+    color: #f0e68c;
+    text-shadow: 0 0 15px rgba(240, 230, 140, 0.8), 0 0 25px rgba(240, 230, 140, 0.6);
     line-height: 1.2;
 }
 
 /* Orders Grid */
 .orders-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns as in the image */
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
     margin-bottom: 4rem;
     max-width: 900px;
@@ -126,7 +124,7 @@ body {
 }
 
 .order-card {
-    background-color: rgba(42, 74, 58, 0.7); /* Dark green for cards with transparency */
+    background-color: rgba(42, 74, 58, 0.7);
     border-radius: 10px;
     padding: 1.5rem;
     text-align: center;
@@ -150,16 +148,16 @@ body {
 .order-card h3 {
     font-size: 1.4rem;
     font-weight: 600;
-    color: #f0e68c; /* Golden color for order names */
+    color: #f0e68c;
 }
 
 /* About Section */
 .about-section {
-    background-color: rgba(42, 74, 58, 0.7); /* Dark green for about section with transparency */
+    background-color: rgba(42, 74, 58, 0.7);
     border-radius: 10px;
     padding: 2rem;
     max-width: 800px;
-    text-align: left; /* Aligned left as in the image */
+    text-align: left;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
@@ -175,35 +173,138 @@ body {
     color: #c0c0c0;
 }
 
-/* Responsive Design */
+/* Nouveaux styles pour les liens de classification */
+.classification-link {
+    text-align: center;
+    margin: 3rem 0;
+    padding: 2rem;
+    background-color: rgba(42, 74, 58, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.classification-link h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: #f0e68c;
+}
+
+.cta-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #f0e68c 0%, #e0d880 100%);
+    color: #1a2a2a;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(240, 230, 140, 0.3);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(240, 230, 140, 0.4);
+}
+
+.about-section.full-width {
+    width: 100%;
+    max-width: none;
+    margin: 4rem 0;
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.approaches {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.approach {
+    background-color: rgba(42, 74, 58, 0.7);
+    border-radius: 10px;
+    padding: 1.5rem;
+    width: 300px;
+    text-align: center;
+}
+
+.approach h3 {
+    color: #f0e68c;
+    margin-bottom: 1rem;
+}
+
+.approach-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #f0e68c;
+    text-decoration: none;
+    font-weight: 600;
+    border: 2px solid #f0e68c;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.approach-link:hover {
+    background-color: #f0e68c;
+    color: #1a2a2a;
+}
+
+footer {
+    background-color: rgba(42, 74, 58, 0.9);
+    padding: 2rem;
+    text-align: center;
+    margin-top: 3rem;
+}
+
+/* Styles pour la navigation mobile */
 @media (max-width: 768px) {
     .navbar {
         padding: 1rem 1.5rem;
     }
+    
     .nav-menu {
         display: none;
         flex-direction: column;
         width: 100%;
-        background-color: rgba(42, 74, 58, 0.9); /* Darker green for mobile menu with transparency */
+        background-color: rgba(42, 74, 58, 0.9);
         position: absolute;
         top: 70px;
         left: 0;
         padding: 1rem 0;
     }
+    
     .nav-menu.active {
         display: flex;
     }
+    
     .hamburger {
         display: flex;
     }
+    
     .hero-title {
         font-size: 3rem;
     }
+    
     .orders-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    
     .about-section {
         margin: 0 1.5rem;
+    }
+    
+    .approaches {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .approach {
+        width: 100%;
+        max-width: 300px;
     }
 }
 
@@ -211,9 +312,81 @@ body {
     .hero-title {
         font-size: 2.5rem;
     }
+    
     .orders-grid {
         grid-template-columns: 1fr;
     }
+    
+    .nav-brand h1 {
+        font-size: 2rem;
+    }
+    
+    .classification-link h2 {
+        font-size: 1.5rem;
+    }
+    
+    .cta-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
 }
 
+/* Animation pour le hamburger menu */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
 
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Animation pour les cartes */
+.order-card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.order-card:nth-child(1) { animation-delay: 0.1s; }
+.order-card:nth-child(2) { animation-delay: 0.2s; }
+.order-card:nth-child(3) { animation-delay: 0.3s; }
+.order-card:nth-child(4) { animation-delay: 0.4s; }
+.order-card:nth-child(5) { animation-delay: 0.5s; }
+.order-card:nth-child(6) { animation-delay: 0.6s; }
+.order-card:nth-child(7) { animation-delay: 0.7s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation pour le titre */
+.hero-title {
+    opacity: 0;
+    animation: fadeIn 1s ease 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Animation pour la section classification */
+.classification-link {
+    opacity: 0;
+    animation: fadeIn 1s ease 1s forwards;
+}
